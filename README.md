@@ -2,9 +2,8 @@
 
 ## Overview
 
-This package provides a practical pipeline for face restoration on both images and videos. 
-
-It first detects one or multiple faces, applies an SR model to each face, then pastes the enhanced results back into the original frame with careful blending—aiming for identity consistency, sharper details, natural colors, and stable results in real-world footage (meetings, compressed clips, group photos).
+This package provides a practical pipeline for face restoration on both images and videos.
+It first detects one or multiple faces, applies a per-face SR model, and then pastes the enhanced results back into the original frame with careful blending—aiming for identity consistency, sharper details, natural colors, and stable results in real-world footage (meetings, compressed clips, group photos).
 
 ## What it does
 
@@ -43,6 +42,28 @@ It first detects one or multiple faces, applies an SR model to each face, then p
 * Meeting recordings, lecture captures, CCTV or heavily compressed social media clips where faces look soft or blocky.
 
 * Group photos or multi-person frames where several faces need enhancement at once.
+
+## How to use it
+Image — face-only SR
+
+Script: photo_infer_faceonly_transformer.py
+
+Detects multiple faces in a still image (or a folder), runs ×4 SR per face, and saves LR/SR comparison tiles plus an overview mosaic.
+
+Edit the parameters at the top of the file (input/output/weights), or run it with your CLI flags if you added them.
+
+Outputs: per-face *_lr.png, *_sr.png, *_card.png and <image>_faces_overview.png.
+
+Video — SR paste-back with blending
+
+Script: video_infer_pasteback_transformer.py
+
+Per-frame detection → per-face ×4 SR → luminance-domain multi-band blending back to the full frame.
+
+Produces three videos for easy inspection: baseline (scaled only), SR result, and side-by-side comparison.
+
+Edit the parameters at the top of the file (video path/output/weights), or run it with your CLI flags if you added them.
+
 ![pic1](/compare_transformer_side_2ppl.png)
 ![pic2](/compare_transformer_side_yz.png)
 ![pic3](/compare_transformer_side_cc.png)
