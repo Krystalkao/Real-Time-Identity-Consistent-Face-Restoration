@@ -45,6 +45,7 @@ It first detects one or multiple faces, applies a per-face SR model, and then pa
 
 ## How to use it
 weights:[hybrid-transformer_model.pth.zip](./hybrid-transformer_model.pth.zip)
+
 Image — face-only SR
 
 Script: [photo_infer_faceonly_transformer.py](https://github.com/Krystalkao/Real-Time-Identity-Consistent-Face-Restoration/blob/821b5121921b314352a9962a79c5c4ab494fba54/photo_infer_faceonly_transformer.py)
