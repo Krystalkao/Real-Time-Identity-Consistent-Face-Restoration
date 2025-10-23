@@ -45,3 +45,4 @@ It first detects one or multiple faces, applies an SR model to each face, then p
 * Group photos or multi-person frames where several faces need enhancement at once.
 ![pic1](/compare_transformer_side_2ppl.png)
 ![pic2](/compare_transformer_side_yz.png)
+<img width="5760" height="6480" alt="compare_transformer_side_cc" src="https://github.com/user-attachments/assets/ef1c3ad2-2b57-479b-8611-8499cfc6f553" />
