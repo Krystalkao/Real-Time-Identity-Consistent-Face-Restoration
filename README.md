@@ -8,6 +8,8 @@ It first detects one or multiple faces, applies an SR model to each face, then p
 
 ## What it does
 
+!(/flow_chart.png)
+
 **Tiled-grid video/image in → face/ROI detection.**
 
 * The system ingests a low-resolution (LR) frame (e.g., a tiled robot-cam view), finds N faces using an MTCNN-style detector, and extracts per-face regions for later processing.
@@ -41,5 +43,5 @@ It first detects one or multiple faces, applies an SR model to each face, then p
 * Meeting recordings, lecture captures, CCTV or heavily compressed social media clips where faces look soft or blocky.
 
 * Group photos or multi-person frames where several faces need enhancement at once.
-!(compare_transformer_side_2ppl.png)
-!()
+!(/compare_transformer_side_2ppl.png)
+!(/compare_transformer_side_yz.png)
