@@ -44,9 +44,10 @@ It first detects one or multiple faces, applies a per-face SR model, and then pa
 * Group photos or multi-person frames where several faces need enhancement at once.
 
 ## How to use it
+weights:[hybrid-transformer_model.pth.zip](./hybrid-transformer_model.pth.zip)
 Image — face-only SR
 
-Script: photo_infer_faceonly_transformer.py
+Script: [photo_infer_faceonly_transformer.py](https://github.com/Krystalkao/Real-Time-Identity-Consistent-Face-Restoration/blob/821b5121921b314352a9962a79c5c4ab494fba54/photo_infer_faceonly_transformer.py)
 
 Detects multiple faces in a still image (or a folder), runs ×4 SR per face, and saves LR/SR comparison tiles plus an overview mosaic.
 
@@ -56,7 +57,7 @@ Outputs: per-face *_lr.png, *_sr.png, *_card.png and <image>_faces_overview.png.
 
 Video — SR paste-back with blending
 
-Script: video_infer_pasteback_transformer.py
+Script: [video_infer_pasteback_transformer.py](https://github.com/Krystalkao/Real-Time-Identity-Consistent-Face-Restoration/blob/821b5121921b314352a9962a79c5c4ab494fba54/video_infer_pasteback_transformer.py)
 
 Per-frame detection → per-face ×4 SR → luminance-domain multi-band blending back to the full frame.
 
