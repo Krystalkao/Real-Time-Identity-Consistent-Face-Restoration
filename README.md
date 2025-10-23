@@ -41,3 +41,5 @@ It first detects one or multiple faces, applies an SR model to each face, then p
 * Meeting recordings, lecture captures, CCTV or heavily compressed social media clips where faces look soft or blocky.
 
 * Group photos or multi-person frames where several faces need enhancement at once.
+!(compare_transformer_side_2ppl.png)
+!()
